@@ -12,23 +12,39 @@
         }
         body {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            /* Arka plana takım fotoğrafınızı ekledik */
+            background: url('team.jpg') no-repeat center center fixed;
+            background-size: cover;
             color: #f8fafc;
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 20px;
+            position: relative;
+        }
+        /* Fotoğrafın çok parlak kalıp yazıları boğmaması için koyu bir katman ekledik */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(15, 23, 42, 0.75); /* Görseli karartma oranı */
+            z-index: 1;
         }
         .container {
+            position: relative;
+            z-index: 2; /* Yazıların karartma katmanının üstünde kalmasını sağlar */
             text-align: center;
             max-width: 500px;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(15, 23, 42, 0.6); /* Kutu arkasını biraz daha belirginleştirdik */
+            border: 1px solid rgba(255, 255, 255, 0.15);
             border-radius: 16px;
             padding: 40px 30px;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         }
         .icon {
             font-size: 48px;
@@ -46,7 +62,7 @@
             -webkit-text-fill-color: transparent;
         }
         p {
-            color: #94a3b8;
+            color: #cbd5e1; /* Yazı okunabilirliği için rengi biraz açtık */
             font-size: 1.1rem;
             line-height: 1.6;
             margin-bottom: 24px;
@@ -72,7 +88,7 @@
 <body>
 
     <div class="container">
-        <div class="icon">🚧</div>
+        <div class="icon">🤖</div> <!-- FTC takımına özel robot emojisiyle güncelledim -->
         <h1>Under Construction</h1>
         <p>We are currently working hard behind the scenes to bring you an incredible experience. Check back soon!</p>
         <div class="spinner"></div>
