@@ -1,98 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FTC Team 25137 Kuanta</title>
+    <title>Kuanta Robotics | Ana Sayfa</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            /* Arka plana takım fotoğrafınızı ekledik */
-            background: url('team.jpg') no-repeat center center fixed;
+        .hero {
+            height: 60vh;
+            background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.9)), url('team.jpg') no-repeat center center;
             background-size: cover;
-            color: #f8fafc;
-            min-height: 100vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 20px;
-            position: relative;
-        }
-        /* Fotoğrafın çok parlak kalıp yazıları boğmaması için koyu bir katman ekledik */
-        body::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(15, 23, 42, 0.75); /* Görseli karartma oranı */
-            z-index: 1;
-        }
-        .container {
-            position: relative;
-            z-index: 2; /* Yazıların karartma katmanının üstünde kalmasını sağlar */
             text-align: center;
-            max-width: 500px;
-            background: rgba(15, 23, 42, 0.6); /* Kutu arkasını biraz daha belirginleştirdik */
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            border-radius: 16px;
-            padding: 40px 30px;
-            backdrop-filter: blur(12px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            padding: 20px;
         }
-        .icon {
-            font-size: 48px;
-            margin-bottom: 20px;
+        .hero h1 { font-size: 3rem; }
+        .cta-btn {
             display: inline-block;
-            animation: float 3s ease-in-out infinite;
+            padding: 12px 24px;
+            background: #38bdf8;
+            color: #0f172a;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: transform 0.2s;
         }
-        h1 {
-            font-size: 2.2rem;
-            font-weight: 700;
-            letter-spacing: -0.05em;
-            margin-bottom: 12px;
-            background: linear-gradient(to right, #38bdf8, #818cf8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        p {
-            color: #cbd5e1; /* Yazı okunabilirliği için rengi biraz açtık */
-            font-size: 1.1rem;
-            line-height: 1.6;
-            margin-bottom: 24px;
-        }
-        .spinner {
-            width: 40px;
-            height: 40px;
-            border: 4px solid rgba(255, 255, 255, 0.1);
-            border-left-color: #38bdf8;
-            border-radius: 50%;
-            margin: 0 auto;
-            animation: spin 1s linear infinite;
-        }
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
+        .cta-btn:hover { transform: scale(1.05); }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="icon">🤖</div> <!-- FTC takımına özel robot emojisiyle güncelledim -->
-        <h1>Under Construction</h1>
-        <p>We are currently working hard behind the scenes to bring you an incredible experience. Check back soon!</p>
-        <div class="spinner"></div>
-    </div>
+    <nav>
+        <div class="logo">⚡ Kuanta 25137</div>
+        <ul>
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="about.html">Takımımız</a></li>
+            <li><a href="robot.html">Robotumuz</a></li>
+            <li><a href="contact.html">İletişim</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <h1>Kuanta Robotics</h1>
+        <p>FTC Team #25137 - Bilimin ve Teknolojinin İzinde</p>
+        <a href="about.html" class="cta-btn">Keşfet</a>
+    </header>
+
+    <main class="container">
+        <h2>Biz Kimiz?</h2>
+        <p>FIRST Tech Challenge turnuvasında yarışan, geleceğin mühendis adaylarından oluşan heyecanlı bir ekibiz. Bu platformda sadece robot yapmıyor; takım çalışması, liderlik ve inovasyon becerilerimizi geliştiriyoruz.</p>
+    </main>
+
+    <footer>
+        <p>© 2026 Kuanta Robotics #25137. Tüm Hakları Saklıdır.</p>
+    </footer>
 
 </body>
 </html>
